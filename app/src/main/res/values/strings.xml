@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Utang</string>
+    <string name="hello_blank_fragment">This is the main fragment</string>
+    <array name="menuOptions">
+        <item>Dashboard</item>
+        <item>Nasabah</item>
+        <item>Report</item>
+        <item>Settings</item>
+        <item>About</item>
+    </array>
+</resources>
