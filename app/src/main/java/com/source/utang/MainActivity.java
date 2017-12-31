@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements DuoMenuView.OnMen
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Exit ?")
                 .setCancelable(false)
-                .setPositiveButton("Ya", new
+                .setPositiveButton("Yap", new
                         DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 //DrawerActivity.this.finish();
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements DuoMenuView.OnMen
                                 android.os.Process.killProcess(android.os.Process.myPid());
                             }
                         })
-                .setNegativeButton("Tidak", new
+                .setNegativeButton("Nop", new
                         DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int arg1) {
