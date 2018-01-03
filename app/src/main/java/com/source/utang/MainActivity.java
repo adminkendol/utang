@@ -10,6 +10,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.Toast;
+
+import com.source.utang.fragments.Listnasabah;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout;
@@ -99,6 +102,9 @@ public class MainActivity extends AppCompatActivity implements DuoMenuView.OnMen
         switch (position) {
             default:
                 goToFragment(new MainFragment2(), false);
+                break;
+            case 1:
+                goToFragment(new Listnasabah(), false);
                 break;
             case 2:
                 goToFragment(new MainFragment(), false);
