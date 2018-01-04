@@ -56,7 +56,7 @@ public class Listnasabah extends Fragment {
             public void onClick(View v) {
                 Toast.makeText(v.getContext(), "TEST", Toast.LENGTH_LONG).show();
                 FragmentTransaction t = getFragmentManager().beginTransaction();
-                Fragment mFrag = new AddUser();
+                Fragment mFrag = new AddNasabah();
                 t.replace(R.id.container, mFrag);
                 t.commit();
                 getActivity().setTitle("Add new");
