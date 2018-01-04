@@ -2,10 +2,12 @@ package com.source.utang.fragments;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -16,8 +18,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.source.utang.R;
-import com.source.utang.Utang;
-import com.source.utang.adapters.RecyclerViewAdapter;
+import com.source.utang.adapters.NasabahViewAdapter;
 import com.source.utang.config.Basic;
 import com.source.utang.config.JSONParser;
 
@@ -36,8 +37,8 @@ import java.util.List;
 
 public class Listnasabah extends Fragment {
     ListView list;
-
     public Listnasabah() {
+
     }
 
     @Override
@@ -48,9 +49,19 @@ public class Listnasabah extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.listdata, container, false);
-        //ReadUtangTask m= (ReadUtangTask) new ReadUtangTask().execute();
-        //list = (ListView) view.findViewById(R.id.listview_data);
         bindListView();
+
+        FloatingActionButton fab =(FloatingActionButton) view.findViewById(R.id.fabB);
+        fab.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(), "TEST", Toast.LENGTH_LONG).show();
+                FragmentTransaction t = getFragmentManager().beginTransaction();
+                Fragment mFrag = new AddUser();
+                t.replace(R.id.container, mFrag);
+                t.commit();
+                getActivity().setTitle("Add new");
+            }
+        });
         return view;
     }
     public void bindListView(){
@@ -126,7 +137,7 @@ public class Listnasabah extends Fragment {
                         user_id[i] = c.getString("user_id");
                     }
 
-                    RecyclerViewAdapter adapter = new RecyclerViewAdapter(this.mContex,nasabah_id,nasabah_name,phone);
+                    NasabahViewAdapter adapter = new NasabahViewAdapter(this.mContex,nasabah_id,nasabah_name,phone);
                     RecyclerView myView =  (RecyclerView) mContex.findViewById(R.id.recyclerview);
                     myView.setHasFixedSize(true);
                     myView.setAdapter(adapter);

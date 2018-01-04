@@ -7,6 +7,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorBar">#811334</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="abu">#80ffffff</color>
 
 
 </resources>

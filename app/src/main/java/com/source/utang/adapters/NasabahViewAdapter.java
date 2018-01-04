@@ -1,32 +1,25 @@
 package com.source.utang.adapters;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
-
-import com.squareup.picasso.Picasso;
-
-import java.util.ArrayList;
+import android.widget.Toast;
 
 import com.source.utang.R;
 
 /**
  * Created by Chandra on 7/30/2016.
  */
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
+public class NasabahViewAdapter extends RecyclerView.Adapter<NasabahViewAdapter.MyViewHolder> {
     private Context mContext;
     private final String[] nasabah_id;
     private final String[] nasabah_name;
     private final String[] phone;
 
-    public RecyclerViewAdapter(Context context, String[] nasabah_id, String[] nasabah_name, String[] phone) {
+    public NasabahViewAdapter(Context context, String[] nasabah_id, String[] nasabah_name, String[] phone) {
         this.nasabah_id= nasabah_id;
         this.nasabah_name= nasabah_name;
         this.phone= phone;
@@ -36,7 +29,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View listItem = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview, parent, false);
-        //listItem.setOnClickListener();
         return new MyViewHolder(listItem);
     }
 
@@ -63,18 +55,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             nasabahId = (TextView)itemView.findViewById(R.id.myId);
             nasabahName = (TextView)itemView.findViewById(R.id.text_name);
             nasabahPhone = (TextView)itemView.findViewById(R.id.text_phone);
-            /*itemView.setOnClickListener(new View.OnClickListener() {
+            itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //Toast.makeText(v.getContext(), tvTitle.getText(), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(mContext, Arsip_cam.class);
+                    Toast.makeText(v.getContext(), nasabahName.getText(), Toast.LENGTH_SHORT).show();
+                    /*Intent intent = new Intent(mContext, Arsip_cam.class);
                     intent.putExtra("camId", String.valueOf(camIdText.getText()));
                     intent.putExtra("camName", String.valueOf(camNameText.getText()));
                     intent.putExtra("camLoc", String.valueOf(locNameText.getText()));
                     intent.putExtra("camImg", String.valueOf(camImgText.getText()));
-                    mContext.startActivity(intent);
+                    mContext.startActivity(intent);*/
                 }
-            });*/
+            });
         }
     }
 }

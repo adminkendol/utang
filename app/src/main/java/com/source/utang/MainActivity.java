@@ -9,8 +9,10 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.source.utang.fragments.Dashboard;
 import com.source.utang.fragments.Listnasabah;
 
 import java.util.ArrayList;
@@ -38,10 +40,11 @@ public class MainActivity extends AppCompatActivity implements DuoMenuView.OnMen
         // Handle drawer actions
         handleDrawer();
         // Show main fragment in container
-        goToFragment(new MainFragment2(), false);
+        goToFragment(new Dashboard(), false);
         mMenuAdapter.setViewSelected(0, true);
         setTitle(mTitles.get(0));
-
+        TextView nama = (TextView) findViewById(R.id.duo_view_header_text_title);
+        nama.setText("Admin");
     }
 
     private void handleToolbar() {
@@ -79,7 +82,6 @@ public class MainActivity extends AppCompatActivity implements DuoMenuView.OnMen
 
     private void goToFragment(Fragment fragment, boolean addToBackStack) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
         if (addToBackStack) {
             transaction.addToBackStack(null);
         }
@@ -101,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements DuoMenuView.OnMen
         // Navigate to the right fragment
         switch (position) {
             default:
-                goToFragment(new MainFragment2(), false);
+                goToFragment(new Dashboard(), false);
                 break;
             case 1:
                 goToFragment(new Listnasabah(), false);

@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "1056937450789",
+    "firebase_url": "https://pinjaman-fb377.firebaseio.com",
+    "project_id": "pinjaman-fb377",
+    "storage_bucket": "pinjaman-fb377.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1056937450789:android:1cd2be1cf2a0e91d",
+        "android_client_info": {
+          "package_name": "com.pinjaman.debt.src"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1056937450789-0lfhe3ltlh95vouv1rgrv3ks2v7bc9it.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMru1bWB4D6ii2DNpKJx6wzf_JsrLcbKg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1056937450789:android:7080b5e42655b19d",
+        "android_client_info": {
+          "package_name": "com.source.utang"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1056937450789-0lfhe3ltlh95vouv1rgrv3ks2v7bc9it.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMru1bWB4D6ii2DNpKJx6wzf_JsrLcbKg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
