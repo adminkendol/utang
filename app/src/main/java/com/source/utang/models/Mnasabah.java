@@ -13,16 +13,16 @@ public class Mnasabah implements Serializable{
     private String nama;
     private String phone;
     private String email;
-    private String id;
+    private String key;
 
     public Mnasabah(){
 
     }
-    public String getId() {
-        return id;
+    public String getKey() {
+        return key;
     }
-    public void setId(String id) {
-        this.id = id;
+    public void setKey(String key) {
+        this.key = key;
     }
     public String getNama() {
         return nama;

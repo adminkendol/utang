@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.source.utang.fragments.Dashboard;
+import com.source.utang.fragments.DataNasabah;
 import com.source.utang.fragments.Listnasabah;
 
 import java.util.ArrayList;
@@ -106,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements DuoMenuView.OnMen
                 goToFragment(new Dashboard(), false);
                 break;
             case 1:
-                goToFragment(new Listnasabah(), false);
+                goToFragment(new DataNasabah(), false);
                 break;
             case 2:
                 goToFragment(new MainFragment(), false);

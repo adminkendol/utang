@@ -54,7 +54,7 @@ public class Listnasabah extends Fragment {
         FloatingActionButton fab =(FloatingActionButton) view.findViewById(R.id.fabB);
         fab.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText(v.getContext(), "TEST", Toast.LENGTH_LONG).show();
+                //Toast.makeText(v.getContext(), "TEST", Toast.LENGTH_LONG).show();
                 FragmentTransaction t = getFragmentManager().beginTransaction();
                 Fragment mFrag = new AddNasabah();
                 t.replace(R.id.container, mFrag);

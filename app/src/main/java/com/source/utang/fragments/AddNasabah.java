@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -78,6 +79,11 @@ public class AddNasabah extends Fragment {
                 etPhone.setText("");
                 etEmail.setText("");
                 Snackbar.make(getActivity().findViewById(R.id.bt_submit), "Data berhasil ditambahkan", Snackbar.LENGTH_LONG).show();
+                FragmentTransaction t = getFragmentManager().beginTransaction();
+                Fragment mFrag = new Listnasabah();
+                t.replace(R.id.container, mFrag);
+                t.commit();
+                getActivity().setTitle("Add new");
             }
         });
     }
