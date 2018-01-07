@@ -80,7 +80,7 @@ public class AddNasabah extends Fragment {
                 etEmail.setText("");
                 Snackbar.make(getActivity().findViewById(R.id.bt_submit), "Data berhasil ditambahkan", Snackbar.LENGTH_LONG).show();
                 FragmentTransaction t = getFragmentManager().beginTransaction();
-                Fragment mFrag = new Listnasabah();
+                Fragment mFrag = new DataNasabah();
                 t.replace(R.id.container, mFrag);
                 t.commit();
                 getActivity().setTitle("Add new");

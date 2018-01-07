@@ -1,30 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:card_view="http://schemas.android.com/apk/res-auto"
+android:id="@+id/cv_main"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginLeft="5dp"
+android:layout_marginRight="5dp"
+android:layout_marginTop="1dp"
+android:layout_marginBottom="0dp"
+card_view:cardElevation="3dp"
+card_view:contentPadding="3dp"
+card_view:cardCornerRadius="3dp"
+card_view:cardMaxElevation="3dp"
+    >
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="?android:attr/listPreferredItemHeight"
-    android:orientation="vertical"
-    android:padding="10dip">
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
 
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/cv_main"
-        android:layout_width="match_parent"
+
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        android:padding="10dp"
-        android:layout_gravity="center_horizontal"
-        card_view:cardBackgroundColor="@color/background_material_light"
-        card_view:cardCornerRadius="3dp"
-        card_view:cardElevation="2.5dp">
+        android:layout_marginTop="3dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical">
+
 
         <TextView
-            android:layout_margin="8dp"
-            android:id="@+id/nama"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Example application"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
-    </android.support.v7.widget.CardView>
+            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+            android:text="Name"
+            android:id="@+id/nama"
+            android:textColor="#1e1e1e"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone"
+            android:textSize="10dp"
+            android:id="@+id/phone"
+            android:textColor="#1e1e1e"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/myId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+
+
+    </LinearLayout>
+
 </LinearLayout>
+
+</android.support.v7.widget.CardView>

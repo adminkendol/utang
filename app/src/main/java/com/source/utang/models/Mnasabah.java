@@ -3,6 +3,8 @@ package com.source.utang.models;
 /**
  * Created by chandra on 04/01/2018.
  */
+import android.text.Editable;
+
 import com.google.firebase.database.IgnoreExtraProperties;
 
 import java.io.Serializable;
