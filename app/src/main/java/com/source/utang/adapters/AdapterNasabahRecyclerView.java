@@ -51,8 +51,6 @@ public class AdapterNasabahRecyclerView extends RecyclerView.Adapter<AdapterNasa
     class ViewHolder extends RecyclerView.ViewHolder {
         /**
          * Inisiasi View
-         * Di tutorial ini kita hanya menggunakan data String untuk tiap item
-         * dan juga view nya hanyalah satu TextView
          */
         TextView tvTitle;
         TextView tvPhone;
@@ -65,7 +63,6 @@ public class AdapterNasabahRecyclerView extends RecyclerView.Adapter<AdapterNasa
             cvMain = (CardView) v.findViewById(R.id.cv_main);
         }
     }
-
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         /**
@@ -76,7 +73,6 @@ public class AdapterNasabahRecyclerView extends RecyclerView.Adapter<AdapterNasa
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
-
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         /**
@@ -90,15 +86,11 @@ public class AdapterNasabahRecyclerView extends RecyclerView.Adapter<AdapterNasa
         holder.cvMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View view) {
-                /**
-                 *  Kodingan untuk tutorial Selanjutnya :p Read detail data
-                 */
                 //context.startActivity(FirebaseDBReadSingleActivity.getActIntent((Activity) context).putExtra("data", daftarBarang.get(position)));
                 LayoutInflater layoutInflaterAndroid = LayoutInflater.from(context);
                 final View mView = layoutInflaterAndroid.inflate(R.layout.addnasabah, null);
                 AlertDialog.Builder alertDialogBuilderUserInput = new AlertDialog.Builder(context);
                 alertDialogBuilderUserInput.setView(mView);
-
                 //final EditText userInputDialogEditText = (EditText) mView.findViewById(R.id.userInputDialog);
                 final EditText etNama = (EditText) mView.findViewById(R.id.nama);
                 final EditText etPhone = (EditText) mView.findViewById(R.id.phone);
@@ -117,7 +109,6 @@ public class AdapterNasabahRecyclerView extends RecyclerView.Adapter<AdapterNasa
                                 Editable edPhone = etPhone.getText();
                                 Editable edEmail = etEmail.getText();
                                 Mnasabah mn = new Mnasabah(String.valueOf(edNama),String.valueOf(edPhone),String.valueOf(edEmail));
-                                //mn.setKey(key);
                                 Log.d("KEY NAME NASABAH", String.valueOf(mn));
                                 dn.updateNasabah(mn,key,context,mView);
                             }
@@ -137,17 +128,12 @@ public class AdapterNasabahRecyclerView extends RecyclerView.Adapter<AdapterNasa
         holder.cvMain.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                /**
-                 *  Kodingan untuk tutorial Selanjutnya :p Delete dan update data
-                 */
                 final Dialog dialog = new Dialog(context);
                 dialog.setContentView(R.layout.dialog_view);
                 //dialog.setTitle("Pilih Aksi");
                 dialog.show();
-
                 Button editButton = (Button) dialog.findViewById(R.id.bt_edit_data);
                 Button delButton = (Button) dialog.findViewById(R.id.bt_delete_data);
-
                 //apabila tombol edit diklik
                 editButton.setOnClickListener(
                         new View.OnClickListener() {
@@ -159,7 +145,6 @@ public class AdapterNasabahRecyclerView extends RecyclerView.Adapter<AdapterNasa
                             }
                         }
                 );
-
                 //apabila tombol delete diklik
                 delButton.setOnClickListener(
                         new View.OnClickListener() {
@@ -176,7 +161,6 @@ public class AdapterNasabahRecyclerView extends RecyclerView.Adapter<AdapterNasa
         holder.tvTitle.setText(name);
         holder.tvPhone.setText(phone);
     }
-
     @Override
     public int getItemCount() {
         /**
