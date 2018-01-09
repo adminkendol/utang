@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.source.utang.fragments.Dashboard;
 import com.source.utang.fragments.DataNasabah;
+import com.source.utang.fragments.DataUtang;
 import com.source.utang.fragments.Listnasabah;
 
 import java.util.ArrayList;
@@ -110,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements DuoMenuView.OnMen
                 goToFragment(new DataNasabah(), false);
                 break;
             case 2:
-                goToFragment(new MainFragment(), false);
+                goToFragment(new DataUtang(), false);
                 break;
         }
         // Close the drawer
